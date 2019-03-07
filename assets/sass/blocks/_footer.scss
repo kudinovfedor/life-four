@@ -1,0 +1,27 @@
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.pre-footer {
+    padding: 20px 0;
+    background-color: lighten($footerBgColor, 10%);
+}
+
+.copyright {
+    padding: 14px 0;
+    background-color: $footerBgColor;
+    text-align: center;
+    color: $footerFontColor;
+
+    a {
+        color: $footerFontColor;
+        text-decoration: underline;
+
+        &:hover {
+            color: $footerLinkColorActive;
+        }
+    }
+}

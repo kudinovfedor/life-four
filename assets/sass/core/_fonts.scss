@@ -1,0 +1,19 @@
+@import "fonts/oswald";
+@import "fonts/montserrat";
+//@import url('https://fonts.googleapis.com/css?family=Comfortaa|Lobster&subset=cyrillic');
+
+//font-family: 'Roboto', sans-serif;
+$font-family-sans-serif: "Arial", "Helvetica", sans-serif;
+$font-family-serif: "Georgia", "Times New Roman", "Times", serif;
+$font-family-monospace: "Menlo", "Monaco", "Consolas", "Courier New", monospace;
+
+$fontFamilyOne: $font-family-sans-serif; //titles
+$fontFamilyTwo: $font-family-sans-serif; //body
+
+.oswald {
+    font-family: 'Oswald', $font-family-sans-serif;
+}
+
+.montserrat {
+    font-family: 'Montserrat', $font-family-sans-serif;
+}

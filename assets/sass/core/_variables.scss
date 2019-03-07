@@ -1,0 +1,144 @@
+$debug: false !default;
+$image-url-path: "assets/img/" !default;
+$font-url-path: "assets/fonts/" !default;
+
+$borderRadius: 0px;
+$shadow: 0 0 10px rgba(#000, .2);
+
+// BRAND
+$themeColorOne: #2c3e50; // header, menu, footer, title,
+$themeColorTwo: #e74c3c; // menu active item, button, footer link hover, woo
+$themeColorThree: #3498db; // preHeader bg, wooOnSale
+$themeColorFour: #2980b9; //menu hover item, table border, preHeader font
+
+// SELECTION
+$selectionBgColor: $themeColorTwo;
+$selectionFontColor: #fff;
+
+// BODY
+$bodyBgColor: #fff; //white
+$bodyFontColor: #000; // black
+
+// PreHeader
+$preHeaderBgColor: $themeColorThree;
+$preHeaderColor: $themeColorFour;
+
+// HEADER
+$headerBgColor: $themeColorOne;
+$headerFontColor: #fff;
+$headerHighlightBgColor: $themeColorTwo;
+$headerHighlightColor: #fff;
+
+// MENU
+$menuBgColor: $themeColorOne;
+$menuBgColorActive: $themeColorFour;
+$menuFontColor: #fff;
+$menuFontColorActive: #fff;
+
+$navArrowColor: #fff;
+$navHeaderMobileBGColor: $themeColorTwo;
+$navHamburgerMobileColor: #fff;
+
+$menuMobileBGColor: $themeColorTwo;
+$menuMobileSubMenuBGColor: lighten($themeColorTwo, 10%);
+$menuMobileLinkFontSize: 16px;
+$menuMobileSubMenuLinkFontSize: 14px;
+$menuMobileTextColor: #fff;
+$menuMobileSubMenuTextColor: $menuMobileTextColor;
+$menuMobileSubMenuBGOnHover: $themeColorTwo;
+$menuMobileSubMenuTextColorOnHover: #fff;
+
+$hamburger-offset: 8px;
+$hamburger-duration: .1s;
+$hamburger-delay: .1s;
+$hamburger-color: $themeColorTwo;
+
+$menu-close-size: 25px;
+$menu-close-color: #fff;
+$menuContainerMobilePaddingTop: 30%;
+// MENU END
+
+// FOOTER
+$footerBgColor: $themeColorOne;
+$footerFontColor: #fff;
+$footerLinkColorActive: darken($footerFontColor, 5%);
+
+// WRAPPER
+$wrapperBgColor: #fff;
+
+// TITLES
+$titleFontColor: $themeColorOne;
+$titleFontColorActive: lighten($titleFontColor, 10%);
+
+// LINKS
+$linkFontColor: #000;
+$linkFontColorActive: lighten($linkFontColor, 20%);
+
+// BUTTONS
+$buttonFontColor: #fff;
+$buttonFontColorActive: #fff;
+$buttonBgColor: $themeColorTwo;
+$buttonBgColorActive: darken($buttonBgColor, 10%);
+$buttonBorderColor: $themeColorTwo;
+$buttonOutlinedFirstColor: $themeColorTwo;
+$buttonOutlinedSecondColor: #fff;
+
+// TABLE
+$tableBgColor: $themeColorTwo;
+$tableBgColorActive: lighten($themeColorTwo, 10%);
+$tableBorderColor: #fff;
+$tableBorderColorActive: #989898;
+$tableOddBgColor: $themeColorOne;
+$tableOddFontColor: #fff;
+$tableEvenBgColor: $themeColorTwo;
+$tableEvenFontColor: #fff;
+
+// TEXT
+$textMutedColor: #aaa;
+
+// Icons
+$iconColor: $themeColorTwo;
+$iconColorActive: $bodyBgColor;
+$iconColorReversed: $bodyBgColor;
+
+// FORMS
+$formFieldBorderWidth: 1px;
+$formFieldBorderColor: lighten($themeColorOne, 30%);
+$formFieldPadding: 10px 8px;
+$formFieldTextColor: #000;
+$formFieldTextSize: 13px;
+$formFieldBorderRadius: $borderRadius;
+$formFieldBackgroundColor: #fff;
+$inputFieldMinHeight: 38px;
+$formBgColor: lighten($themeColorOne, 75%);
+
+// Pagination
+$paginationActiveLink: $themeColorTwo;
+$paginationActiveLinkText: #fff;
+$paginationLinkOnHover: $themeColorTwo;
+$paginationLinkOnHoverText: #fff;
+
+//WOOCOMMERCE
+$wooThemeColor: $themeColorTwo;
+
+// On sale
+$onsaleBackgroundColor: $wooThemeColor;
+$onsaleFontColor: #fff;
+
+// Products price
+$productsPriceFontColor: $wooThemeColor;
+
+// Single Product page
+$productPriceFontColor: $wooThemeColor;
+
+// error
+$errorBorderTopColor: #b81c23;
+$errorIconFontColor: #b81c23;
+
+// info
+$infoBorderTopColor: #1e85be;
+$infoIconFontColor: #1e85be;
+
+// message
+$messageBorderTopColor: $themeColorTwo;
+$messageIconFontColor: $themeColorTwo;
