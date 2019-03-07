@@ -61,7 +61,7 @@
 
         close.on('click', () => {
             form.addClass('is-hide');
-        })
+        });
     };
 
     /**

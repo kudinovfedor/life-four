@@ -144,8 +144,8 @@ img {
     margin-right: auto;
     @extend %clearfix;
 
-    @media only screen and (min-width: 1600px) {
-        width: 1560px;
+    @media only screen and (min-width: 1230px) {
+        width: 1200px;
     }
 }
 
