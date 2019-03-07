@@ -17,64 +17,86 @@
 <?php wp_body(); ?>
 
 <div class="wrapper">
-    <?php /*
-    <div class="pre-header">
+
+    <header class="header">
         <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                    <nav class="second-menu">
-                        <?php wp_nav_menu(array(
-                            'theme_location' => 'second-menu',
-                            'container' => false,
-                            'menu_class' => 'menu-container',
-                            'menu_id' => '',
-                            'fallback_cb' => 'wp_page_menu',
-                            'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                            'depth' => 2
-                        )); ?>
-                    </nav>
+            <div class="row header-row d-flex flex-wrap align-items-center">
+                <div class="col-xs-12 text-center header-logo">
+                    <div class="logo"><?php get_default_logo_link(true, '#000'); ?></div>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                    Some info here
+                <div class="col-xs-12 col-md-6 header-menu">
+                    <?php if (has_nav_menu('main-nav')) { ?>
+                        <nav class="nav js-menu">
+                            <button type="button" tabindex="0"
+                                    class="menu-item-close menu-close js-menu-close"></button>
+                            <?php wp_nav_menu(array(
+                                'theme_location' => 'main-nav',
+                                'container' => false,
+                                'menu_class' => 'menu-container',
+                                'menu_id' => '',
+                                'fallback_cb' => 'wp_page_menu',
+                                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                'depth' => 3
+                            )); ?>
+                        </nav>
+                    <?php } ?>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                    Some info here
+                <div class="col-xs-12 col-md-6 text-right header-meta">
+                    <div class="header-cell">
+                        <a class=" header-basket basket" href="<?php echo esc_url(home_url('/')); ?>">
+                            <svg class="svg-icon is-hide" width="25" height="25" fill="#000">
+                                <use href="#basket"></use>
+                            </svg>
+                            <i class="fal fa-shopping-cart" aria-hidden="true"></i>
+                            <span class="basket-count">0</span>
+                        </a>
+                    </div>
+                    <div class="header-cell header-search">
+                        <button class="header-search-btn js-search-btn" type="button">
+                            <svg class="svg-icon is-hide" width="25" height="25" fill="#000">
+                                <use href="#search"></use>
+                            </svg>
+                            <i class="fal fa-search" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <?php if (has_social()) { ?>
+                        <ul class="header-cell social">
+                            <?php foreach (get_social() as $name => $social) { ?>
+                                <li class="social-item social-sm">
+                                    <a href="<?php echo esc_attr(esc_url($social['url'])); ?>"
+                                       class="social-link social-<?php echo esc_attr($name); ?>" target="_blank">
+                                        <?php if (!empty($social['icon-html'])) {
+                                            echo strip_tags($social['icon-html'], '<i>');
+                                        } else { ?>
+                                            <i class="<?php echo esc_attr($social['icon']); ?>" aria-hidden="true"
+                                               aria-label="<?php echo esc_attr($social['text']); ?>"></i>
+                                        <?php } ?>
+                                    </a>
+                                </li>
+                            <?php } ?>
+                        </ul>
+                    <?php } ?>
                 </div>
             </div>
         </div>
-    </div>
-    */ ?>
-
-    <header class="page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                    <?php get_default_logo_link(); ?>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                    
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+        <div class="header-base"></div>
+        <div class="header-search-form js-search-form is-hide">
+            <div class="container">
+                <div class="d-flex align-items-center">
+                    <button class="header-search-close js-search-close" type="button">
+                        <i class="fal fa-times" aria-hidden="true"></i>
+                    </button>
                     <?php get_search_form(); ?>
                 </div>
             </div>
         </div>
     </header>
 
-    <?php if (has_nav_menu('main-nav')) { ?>
-        <nav class="nav js-menu">
-            <button type="button" tabindex="0" class="menu-item-close menu-close js-menu-close"></button>
-            <?php wp_nav_menu(array(
-                'theme_location' => 'main-nav',
-                'container' => false,
-                'menu_class' => 'menu-container',
-                'menu_id' => '',
-                'fallback_cb' => 'wp_page_menu',
-                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                'depth' => 3
-            )); ?>
-        </nav>
-    <?php } ?>
+    <div class="text-center">
+        <div class="button-medium">Continue reading</div>
+        <div class="button-medium button-inverse">Continue reading</div>
+        <div class="button-medium button-outline">Continue reading</div>
+    </div>
 
     <div class="container js-container">
 
@@ -84,5 +106,5 @@
                 <span class="hamburger-inner"></span>
             </span>
             </button>
-            <div class="logo"><?php get_default_logo_link(); ?></div>
+            <div class="logo"><?php get_default_logo_link(true, '#fff'); ?></div>
         </div>

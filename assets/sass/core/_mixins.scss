@@ -40,14 +40,15 @@
     cursor: pointer;
     display: inline-block;
     vertical-align: middle;
-    border: 0;
+    border: 1px solid transparent;
     border-radius: $borderRadius;
     background-color: $buttonBgColor;
     color: $buttonFontColor;
     text-transform: uppercase;
     text-align: center;
     font-family: inherit;
-    font-weight: 700;
+    font-weight: 400;
+    letter-spacing: 2px;
     box-shadow: $shadow;
     @include smooth_animation;
 

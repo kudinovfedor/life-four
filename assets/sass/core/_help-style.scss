@@ -45,7 +45,7 @@ em {
     &-underline {
         text-decoration: underline;
     }
-    
+
     &-through {
         text-decoration: line-through;
     }
@@ -115,10 +115,6 @@ em {
     }
 }
 
-.is-hide {
-    display: none;
-}
-
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -137,8 +133,131 @@ em {
     .hide-on-desktop {
         display: block !important;
     }
-    
+
     .center-on-mobile {
         text-align: center !important;
+    }
+}
+
+.text {
+    &-left {
+        text-align: left;
+    }
+
+    &-right {
+        text-align: right;
+    }
+
+    &-center {
+        text-align: center;
+    }
+
+    &-justify {
+        text-align: justify;
+    }
+
+    &-wrap {
+        white-space: normal;
+    }
+
+    &-nowrap {
+        white-space: nowrap;
+    }
+
+    &-break {
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+    &-truncate,
+    &-ellipsis {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &-lowercase {
+        text-transform: lowercase;
+    }
+
+    &-uppercase {
+        text-transform: uppercase;
+    }
+
+    &-capitalize {
+        text-transform: capitalize;
+    }
+
+    &-italic {
+        font-style: italic;
+    }
+
+    &-thin {
+        font-weight: 100;
+    }
+
+    &-extralight,
+    &-extra-light {
+        font-weight: 200;
+    }
+
+    &-light {
+        font-weight: 300;
+    }
+
+    &-regular,
+    &-normal {
+        font-weight: 400;
+    }
+
+    &-medium {
+        font-weight: 500;
+    }
+
+    &-semibold,
+    &-semi-bold {
+        font-weight: 600;
+    }
+
+    &-bold {
+        font-weight: 700;
+    }
+
+    &-extrabold,
+    &-extra-bold {
+        font-weight: 800;
+    }
+
+    &-weight-black {
+        font-weight: 900;
+    }
+
+    &-lighter {
+        font-weight: lighter;
+    }
+
+    &-bolder {
+        font-weight: bolder;
+    }
+
+    &-underline {
+        text-decoration: underline;
+    }
+
+    &-decoration-none {
+        text-decoration: none;
+    }
+
+    &-linethrough,
+    &-line-through {
+        text-decoration: line-through;
+    }
+
+    &-white {
+        color: #fff;
+    }
+
+    &-black {
+        color: #000;
     }
 }

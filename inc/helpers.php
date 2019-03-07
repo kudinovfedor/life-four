@@ -378,11 +378,13 @@ if (!function_exists('get_default_logo_link')) {
     /**
      * Display site logo
      *
+     * @param bool $svg
+     * @param string $color
      * @return void
      */
-    function get_default_logo_link()
+    function get_default_logo_link($svg = false, $color = '#000')
     {
-        $desc = sprintf('<span class="logo-desc screen-reader-text">%s</span>', get_bloginfo('description'));
+        $desc = sprintf('<span class="logo-desc">%s</span>', get_bloginfo('description'));
 
         if (has_custom_logo()) {
 
@@ -391,9 +393,12 @@ if (!function_exists('get_default_logo_link')) {
 
         } else {
 
-            $file = get_template_directory_uri() . '/assets/img/logo.png';
-
-            $img = sprintf('<img class="logo-img" src="%s" alt="%s">', esc_url($file), get_bloginfo('name'));
+            if ($svg) {
+                $img = sprintf('<svg class="logo-img" width="113" height="118" fill="%s"><use href="#logo"></use></svg>', $color);
+            } else {
+                $file = get_template_directory_uri() . '/assets/img/logo.png';
+                $img = sprintf('<img class="logo-img" src="%s" alt="%s">', esc_url($file), get_bloginfo('name'));
+            }
 
             $link = sprintf('<a class="logo-link" href="%s">%s</a>', esc_url(home_url('/')), $img);
 

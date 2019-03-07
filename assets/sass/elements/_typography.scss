@@ -39,6 +39,11 @@ i.button-style {
     padding: 3px 8px;
 }
 
+p {
+    @extend .montserrat;
+    font-weight: 300;
+}
+
 @media #{$mobile} {
     p {
         font-size: $p_mobile * $p_size;

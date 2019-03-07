@@ -11,12 +11,38 @@
         </div><!-- .pre-footer end-->
     <?php endif; ?>
 
-    <div class="copyright">
-        <p class="container">
-            <?php _e('Developed by', 'brainworks') ?>
-            <a href="https://brainworks.pro/" target="_blank">BRAIN WORKS</a>
-            &copy; <?php echo date('Y'); ?>
-        </p>
+    <div class="footer-main">
+        <div class="logo footer-logo"><?php get_default_logo_link(true, '#000'); ?></div>
+        <div class="container">
+            <div class="footer-row row text-uppercase d-flex justify-content-center align-items-center">
+                <div class="col-xs-12 col-md-4 footer-column footer-copyright">
+                    &copy; <?php echo date('Y'); ?> &laquo;4life&raquo;. <?php _e('All right received', 'brainworks'); ?>
+                </div>
+                <div class="col-xs-12 col-md-4 footer-column text-center">
+                    <?php if (has_social()) { ?>
+                        <ul class="social">
+                            <?php foreach (get_social() as $name => $social) { ?>
+                                <li class="social-item">
+                                    <a href="<?php echo esc_attr(esc_url($social['url'])); ?>"
+                                       class="social-link social-<?php echo esc_attr($name); ?>" target="_blank">
+                                        <?php if (!empty($social['icon-html'])) {
+                                            echo strip_tags($social['icon-html'], '<i>');
+                                        } else { ?>
+                                            <i class="<?php echo esc_attr($social['icon']); ?>" aria-hidden="true"
+                                               aria-label="<?php echo esc_attr($social['text']); ?>"></i>
+                                        <?php } ?>
+                                    </a>
+                                </li>
+                            <?php } ?>
+                        </ul>
+                    <?php } ?>
+                </div>
+                <div class="col-xs-12 col-md-4 footer-column text-right footer-developer">
+                    <?php _e('Developed by', 'brainworks') ?>
+                    <a href="https://brainworks.pro" target="_blank">BRAIN WORKS</a>
+                </div>
+            </div>
+        </div>
     </div>
 </footer>
 

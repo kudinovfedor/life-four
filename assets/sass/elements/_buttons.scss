@@ -47,12 +47,26 @@ button {
 
 .button-inverse {
     @extend %button-style;
-    color: $buttonFontColorActive;
-    background-color: $buttonBgColorActive;
+    color: #353535;
+    background-color: #fff;
 
     &:hover,
     &:active {
         color: $buttonFontColor;
+        background-color: $buttonBgColor;
+    }
+}
+
+.button-outline {
+    @extend %button-style;
+    color: #000;
+    border: 1px solid #000;
+    background-color: transparent;
+
+    &:hover,
+    &:active {
+        color: $buttonFontColor;
+        border-color: $buttonBgColor;
         background-color: $buttonBgColor;
     }
 }

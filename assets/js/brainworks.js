@@ -12,6 +12,7 @@
             html.addClass("is-mobile");
         }
         html.removeClass("no-js").addClass("js");
+        search();
         scrollToElement();
         sidebarAccordion();
         reviews(".js-reviews");
@@ -30,6 +31,17 @@
             }
         });
     });
+    var search = function search() {
+        var btn = $(".js-search-btn");
+        var close = $(".js-search-close");
+        var form = $(".js-search-form");
+        btn.on("click", function() {
+            form.removeClass("is-hide");
+        });
+        close.on("click", function() {
+            form.addClass("is-hide");
+        });
+    };
     var stickFooter = function stickFooter(footer, container) {
         var el = $(footer);
         var height = el.outerHeight() + 20 + "px";

@@ -20,7 +20,7 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "core/fonts";
 @import "core/wp-core";
 @import "core/help-style";
-//@import "core/flexbox";
+@import "core/flexbox";
 
 // PLUG-INs
 @import "plugins/font-awesome/font-awesome";
@@ -44,8 +44,8 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "elements/responsive-titles";
 @import "elements/scroll-top";
 @import "elements/forms";
-//@import "elements/buttons";
-@import "elements/buttons-2";
+@import "elements/buttons";
+//@import "elements/buttons-2";
 @import "elements/links";
 @import "elements/pagination";
 @import "elements/tables";
@@ -96,7 +96,7 @@ body {
     background-color: $bodyBgColor;
     color: $bodyFontColor;
     font-family: $fontFamilyTwo;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .wrapper {
@@ -104,8 +104,8 @@ body {
     overflow-x: hidden;
     min-height: 100%;
 
-    @media #{$mobile} {
-        padding-top: 80px;
+    @media only screen and (max-width: 768px) {
+        padding-top: 91px;
     }
 }
 
@@ -132,6 +132,10 @@ img {
     @extend %smooth_animation;
 }
 
+.is-hide {
+    display: none;
+}
+
 .container {
     position: relative;
     padding-left: 15px;
@@ -140,8 +144,8 @@ img {
     margin-right: auto;
     @extend %clearfix;
 
-    @media only screen and (min-width: 1200px) {
-        width: 1170px;
+    @media only screen and (min-width: 1600px) {
+        width: 1560px;
     }
 }
 
@@ -168,5 +172,127 @@ img {
     //sm 545 - 768
     @media #{$tablet} {
         background: none;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .nav .menu-item:not(:last-child) {
+        margin-right: 15px;
+    }
+
+    .header {
+        &-cell {
+            padding: 0 7px;
+        }
+
+        &-logo {
+            .logo-img {
+                width: 80px;
+                height: 85px;
+            }
+        }
+
+        &-base {
+            $size: round(485px / 1.5);
+            $width: $size;
+            $height: 50px;
+            $factor: 1 + abs(($height / $width) - 1) * .94;
+            height: $height;
+            width: $size;
+
+            &::before {
+                width: round($size * $factor);
+                height: round($size * $factor);
+            }
+        }
+
+        &-search-form {
+            padding: 45px 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    .social {
+        &-item {
+            margin: 5px;
+        }
+
+        &-link {
+            width: 30px;
+            height: 30px;
+            font-size: 14px;
+            line-height: 30px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        padding: 10px 0;
+        margin-bottom: 0;
+
+        &-logo,
+        &-base {
+            display: none;
+        }
+
+        &-meta {
+            text-align: center;
+        }
+
+        &-search {
+            &-form {
+                padding: 4px 0;
+
+                .form-control {
+                    padding: 5px 10px;
+                    font-size: 14px;
+                    line-height: 1.3;
+                }
+            }
+
+            &-close {
+                font-size: 22px;
+            }
+        }
+    }
+
+    .logo-desc {
+        display: none;
+    }
+
+    .nav-mobile-header {
+        .logo-img {
+            height: 70px;
+            width: 65px;
+        }
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .footer {
+        &-main {
+            font-size: 12px;
+            margin-top: 65px;
+            padding: 65px 0 10px;
+        }
+
+        &-logo {
+            width: 125px;
+            height: 125px;
+            padding: 15px;
+        }
+
+        &-row {
+            display: block;
+        }
+
+        &-column {
+            padding: 2px 0;
+            text-align: center;
+        }
     }
 }

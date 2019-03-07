@@ -2,8 +2,8 @@
     display: none;
 }
 
-//xs 544
-@media #{$mobile} {
+//768px
+@media only screen and (max-width: 768px) {
     nav.main-nav {
         display: none;
     }
@@ -25,8 +25,9 @@
 
         .hamburger {
             position: absolute;
-            top: 15px;
+            top: 50%;
             right: 10px;
+            margin-top: -19px;
         }
     }
 

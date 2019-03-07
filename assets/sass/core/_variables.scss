@@ -2,12 +2,12 @@ $debug: false !default;
 $image-url-path: "assets/img/" !default;
 $font-url-path: "assets/fonts/" !default;
 
-$borderRadius: 0px;
-$shadow: 0 0 10px rgba(#000, .2);
+$borderRadius: 0;
+$shadow: none;
 
 // BRAND
-$themeColorOne: #2c3e50; // header, menu, footer, title,
-$themeColorTwo: #e74c3c; // menu active item, button, footer link hover, woo
+$themeColorOne: #000000; // header, menu, footer, title,
+$themeColorTwo: #000000; // menu active item, button, footer link hover, woo
 $themeColorThree: #3498db; // preHeader bg, wooOnSale
 $themeColorFour: #2980b9; //menu hover item, table border, preHeader font
 
@@ -24,8 +24,8 @@ $preHeaderBgColor: $themeColorThree;
 $preHeaderColor: $themeColorFour;
 
 // HEADER
-$headerBgColor: $themeColorOne;
-$headerFontColor: #fff;
+$headerBgColor: #fff;
+$headerFontColor: #353535;
 $headerHighlightBgColor: $themeColorTwo;
 $headerHighlightColor: #fff;
 
@@ -78,7 +78,7 @@ $linkFontColorActive: lighten($linkFontColor, 20%);
 $buttonFontColor: #fff;
 $buttonFontColorActive: #fff;
 $buttonBgColor: $themeColorTwo;
-$buttonBgColorActive: darken($buttonBgColor, 10%);
+$buttonBgColorActive: lighten($buttonBgColor, 10%);
 $buttonBorderColor: $themeColorTwo;
 $buttonOutlinedFirstColor: $themeColorTwo;
 $buttonOutlinedSecondColor: #fff;

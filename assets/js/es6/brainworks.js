@@ -17,6 +17,7 @@
 
         html.removeClass('no-js').addClass('js');
 
+        search();
         scrollToElement();
         sidebarAccordion();
         reviews('.js-reviews');
@@ -38,6 +39,30 @@
             }
         });
     });
+
+    /**
+     * Search
+     *
+     * @example
+     * search();
+     *
+     * @author Fedor Kudinov <brothersrabbits@mail.ru>
+     *
+     * @returns {void}
+     */
+    const search = () => {
+        const btn = $('.js-search-btn');
+        const close = $('.js-search-close');
+        const form = $('.js-search-form');
+
+        btn.on('click', () => {
+            form.removeClass('is-hide');
+        });
+
+        close.on('click', () => {
+            form.addClass('is-hide');
+        })
+    };
 
     /**
      * Stick Footer
