@@ -1,0 +1,16 @@
+a {
+    text-decoration: none;
+    color: $linkFontColor;
+    @extend %smooth_animation;
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+        color: $linkFontColorActive;
+
+        i.fa {
+            color: #fff;
+        }
+    }
+}
